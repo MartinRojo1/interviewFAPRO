@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulario de fecha</title>
+	<style>
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+		}
+
+		label {
+			margin-bottom: 10px;
+		}
+
+		input{
+			padding: 10px;
+            margin: 5px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			font-size: 16px;
+		}
+        .container {
+        text-align: center;
+       }
+       h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+       }
+       p {
+        font-size: 24px;
+        margin-bottom: 10px;
+       }
+	</style>
+</head>
+<body>
+    {%if ver %}
+	<form method="post" action="/" enctype="multipart/form-data">
+
+		<label for="fecha">Fecha:</label>
+		<input type="date" id="fecha" name="fecha">
+        <input type="submit" value="Buscar"></input>
+
+	</form>
+
+    {% else %}
+
+    
+        <div class="container">
+            <h1>Valor encontrado</h1>
+            <p>Fecha: {{ fecha }}</p>
+            <p>Valor: {{ valor_encontrado }}</p>
+        </div>
+        
+        
+
+    {% endif %}
+</body>
+</html>
